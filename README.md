@@ -24,3 +24,7 @@ Most IcM configurations only notify (via text or phone call) the primary on-call
 1. Records how many incidents there are
 2. After a network request for new incidents is made, calculate the difference
 3. If the difference greater than 1, create a notification
+
+## Privacy Statement
+
+* No data is sent off your machine
