@@ -3,9 +3,6 @@ let numIncidents = -1;
 chrome.runtime.onMessage.addListener((data) => {
   console.log('Received message:', data.type || data)
   switch (data.type) {
-    case "notification":
-      chrome.notifications.create("icm", data.options);
-      break;
     case "IncidentsCount":
       console.log("Incident Count:", data.count);
 
