@@ -1,14 +1,12 @@
 let numIncidents = -1;
 
 chrome.runtime.onMessage.addListener((data) => {
-  console.log('Received message:', data.type || data)
+  console.log("Received message:", data.type || data);
   switch (data.type) {
     case "IncidentsCount":
       console.log("Incident Count:", data.count);
 
-      if (numIncidents === -1) {
-        numIncidents = data.count;
-      } else {
+      if (numIncidents !== -1) {
         const newIncidents = data.count - numIncidents;
         if (newIncidents > 0) {
           console.log("New Incidents Count:", newIncidents);
@@ -19,11 +17,11 @@ chrome.runtime.onMessage.addListener((data) => {
             type: "basic",
             priority: 2,
           });
-          numIncidents = data.count
         } else {
           console.log("No new incidents.");
         }
       }
+      numIncidents = data.count;
       break;
   }
 });
@@ -64,7 +62,7 @@ chrome.webRequest.onCompleted.addListener((details) => {
     status: "complete",
   });
 
-  console.log('Getting incidents count.')
+  console.log("Getting incidents count.");
   chrome.tabs.sendMessage(tabId, { message: "GetIncidentsCount" });
 }, networkFilters);
 
