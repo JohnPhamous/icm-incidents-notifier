@@ -19,6 +19,7 @@ chrome.runtime.onMessage.addListener((data) => {
             type: "basic",
             priority: 2,
           });
+          numIncidents = data.count
         } else {
           console.log("No new incidents.");
         }
