@@ -1,6 +1,6 @@
 {
-  "name": "Edge IcM Pump Notifier",
-  "version": "0.0.1",
+  "name": "IcM Incident Notifier",
+  "version": "0.0.2",
   "manifest_version": 2,
   "description": "Sends you notifications when there are new incidents",
   "homepage_url": "https://pham.codes",
