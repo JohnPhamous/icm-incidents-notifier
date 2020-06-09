@@ -17,12 +17,11 @@
     "notifications",
     "webRequest",
     "tabs",
-    "https://icm.ad.msft.net/*",
-    "https://*/*"
+    "https://icm.ad.msft.net/*"
   ],
   "content_scripts": [
     {
-      "matches": ["https://icm.ad.msft.net/*", "https://*/*"],
+      "matches": ["https://icm.ad.msft.net/*"],
       "js": ["src/inject/inject.js"]
     }
   ]
