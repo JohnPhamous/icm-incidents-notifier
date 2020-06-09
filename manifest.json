@@ -1,0 +1,29 @@
+{
+  "name": "Edge IcM Pump Notifier",
+  "version": "0.0.1",
+  "manifest_version": 2,
+  "description": "Sends you notifications when there are new incidents",
+  "homepage_url": "https://pham.codes",
+  "icons": {
+    "16": "icons/icon16.png",
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+  },
+  "background": {
+    "scripts": ["src/bg/background.js"],
+    "persistent": true
+  },
+  "permissions": [
+    "notifications",
+    "webRequest",
+    "tabs",
+    "https://icm.ad.msft.net/*",
+    "https://*/*"
+  ],
+  "content_scripts": [
+    {
+      "matches": ["https://icm.ad.msft.net/*", "https://*/*"],
+      "js": ["src/inject/inject.js"]
+    }
+  ]
+}
