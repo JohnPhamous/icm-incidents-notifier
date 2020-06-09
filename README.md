@@ -1,3 +1,5 @@
+<img src="https://github.com/JohnPhamous/icm-incidents-notifier/blob/master/icons/icon120.png?raw=true" align="right" />
+
 # IcM Incidents Notifier
 
 > A browser extension that will send you notifications when there are new incidents.
