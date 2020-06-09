@@ -15,7 +15,7 @@ chrome.runtime.onMessage.addListener((data) => {
           chrome.notifications.create("icm", {
             title: "Edge Pump IcM",
             message: `There are ${newIncidents} new incidents!`,
-            iconUrl: "../../icons/icon128.png",
+            iconUrl: "../../icons/icon120.png",
             type: "basic",
             priority: 2,
           });
